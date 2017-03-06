@@ -48,7 +48,6 @@ from requests import Request
 from six.moves import html_entities, http_cookiejar
 from six.moves.urllib.parse import parse_qs, urlparse, urlunparse
 # pylint: enable=F0401
-from update_checker import update_check
 from warnings import warn_explicit
 
 
@@ -362,10 +361,10 @@ class BaseReddit(object):
         self.modhash = None
 
         # Check for updates if permitted and this is the first Reddit instance
-        if not disable_update_check and not BaseReddit.update_checked \
-                and self.config.check_for_updates:
-            update_check(__name__, __version__)
-            BaseReddit.update_checked = True
+        # if not disable_update_check and not BaseReddit.update_checked \
+        #         and self.config.check_for_updates:
+        #     update_check(__name__, __version__)
+        #     BaseReddit.update_checked = True
 
         # Warn against a potentially incompatible version of pyOpenSSL
         if not BaseReddit.openssl_warned and self.config.validate_certs:

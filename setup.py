@@ -16,8 +16,7 @@ with open(path.join(HERE, PACKAGE_NAME, '__init__.py'),
 
 dependencies = ['decorator >=4.0.9, <4.1',
                 'requests >=2.3.0',
-                'six ==1.10',
-                'update_checker >=0.12, <1.0']
+                'six ==1.10']
 
 try:
     from OpenSSL import __version__ as opensslversion
