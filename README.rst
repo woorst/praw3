@@ -5,101 +5,30 @@ PRAW: The Python Reddit API Wrapper
 
 .. begin_description
 
-.. image:: https://travis-ci.org/praw-dev/praw.svg?branch=master
-           :target: https://travis-ci.org/praw-dev/praw
-.. image:: https://coveralls.io/repos/praw-dev/praw/badge.svg?branch=master
-  :target: https://coveralls.io/r/praw-dev/praw?branch=master
+.. image:: https://travis-ci.org/michael-lazar/praw3.svg?branch=master
+  :target: https://travis-ci.org/michael-lazar/praw3
+.. image:: https://coveralls.io/repos/github/michael-lazar/praw3/badge.svg?branch=master
+  :target: (https://coveralls.io/github/michael-lazar/praw3?branch=master
 
+This repository contains a fork of the `PRAW <https://github.com/praw-dev/praw>`_ library, with intent of continuing support for the (deprecated) version 3 branch. If you are looking for information about the official PRAW library, please visit their `documentation <http://praw.readthedocs.io/en/latest/>`_. This fork was created to support the `RTV <https://github.com/michael-lazar/rtv>`_ reddit command line application. RTV relies heavily on the structure of the legacy PRAW API and would require a major overhaul to support the new version. The maintainer of PRAW has expressed that he does not intend to provide any support for older versions going forward. It is important to note that the Reddit API itself has not released any breaking changes. Both versions of PRAW can interact with the core Reddit functions, although the newer version contains support for some of the more cutting-edge features such as live threads.
 
-PRAW, an acronym for "Python Reddit API Wrapper", is a python package that
-allows for simple access to reddit's API. PRAW aims to be as easy to use as
-possible and is designed to follow all of `reddit's API rules
-<https://github.com/reddit/reddit/wiki/API>`_. You have to give a useragent
-that follows the rules, everything else is handled by PRAW so you needn't worry
-about violating them.
+The goal of this repository is to provide support for security updates and bug fixes to the stable PRAW 3 branch. This is not intended to compete against the official PRAW library in any way. Anyone who is capable of doing so to should be using the latest official version of PRAW.
 
-Here's a quick peek, getting the first 5 submissions from
-the 'hot' section of the 'opensource' subreddit:
-
-.. code-block:: pycon
-
-    >>> import praw
-    >>> r = praw.Reddit(user_agent='my_cool_application')
-    >>> submissions = r.get_subreddit('opensource').get_hot(limit=5)
-    >>> [str(x) for x in submissions]
-
-This will display something similar to the following:
-
-.. code-block:: pycon
-
-    ['10 :: Gun.io Debuts Group Funding for Open Source Projects\n Gun.io',
-     '24 :: Support the Free Software Foundation',
-     '67 :: The 10 Most Important Open Source Projects of 2011',
-     '85 :: Plan 9 - A distributed OS with a unified communicatioprotocol  I/O...',
-      '2 :: Open-source webOS is dead on arrival ']
-
-.. end_description
-
-.. begin_installation
-
-.. _installation:
-
-Installation
-------------
-
-PRAW is supported on python 2.7, 3.3, 3.4 and 3.5. The recommended way to
-install is via `pip <https://pypi.python.org/pypi/pip>`_
-
-.. code-block:: bash
-
-    $ pip install praw
-
-
-If you want to run the development version of PRAW try:
-
-.. code-block:: bash
-
-    $ pip install --upgrade https://github.com/praw-dev/praw/archive/master.zip
-
-If you don't have ``pip`` installed, then the Hitchhiker's Guide to Python has
-a section for setting it up on `Windows
-<http://docs.python-guide.org/en/latest/starting/install/win/>`_,
-`Mac <http://docs.python-guide.org/en/latest/starting/install/osx/>`_ and
-`Linux <http://docs.python-guide.org/en/latest/starting/install/linux/>`_.
-There is also a `Stack overflow question on installing pip on Windows
-<http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows>`_
-that might prove helpful.
-
-.. end_installation
-
-.. begin_support
-
-Support
+Changes
 -------
 
-The official place to ask questions about PRAW, reddit and other API wrappers
-is `r/redditdev <https://www.reddit.com/r/redditdev>`_. If the question is more
-about Python and less about PRAW, such as "what are generators", then you're
-likely to get more, faster and more in-depth answers in `r/learnpython
-<https://www.reddit.com/r/learnpython>`_.
+This repository was forked on March 6, 2017 from PRAW v3.6.1. Since then, the following changes have been made:
 
-If you've uncovered a bug or have a feature request, then `make an issue on our
-project page at github <https://github.com/praw-dev/praw/issues>`_.
-
-Please note that this project is released with a `Contributor Code of Conduct
-<https://github.com/praw-dev/praw/blob/master/CODE_OF_CONDUCT.md>`_. By
-participating in this project you agree to abide by its terms.
-
-.. end_support
+- Removed the ``update_checker`` dependency
+- Switched from absolute imports to relative imports, in order to make it possible to bundle the *praw/* directory inside of another project
+- Fixed the ``requests`` version requirement
 
 Documentation
 -------------
 
-PRAW's documentation, which includes tutorials, information on configuring PRAW
-and other good stuff can be found at `readthedocs
-<https://praw.readthedocs.io>`_.
+For now, the PRAW v3 documentation is still being hosted at http://praw.readthedocs.io/en/v3.6.1/
 
-.. begin_license
+
 
 License
 -------
