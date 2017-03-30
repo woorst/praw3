@@ -15,7 +15,7 @@ with open(path.join(HERE, PACKAGE_NAME, '__init__.py'),
     VERSION = re.search("__version__ = '([^']+)'", fp.read()).group(1)
 
 dependencies = ['decorator >=4.0.9, <4.1',
-                'requests >=2.3.0',
+                'requests >=2.4.0',
                 'six ==1.10']
 
 try:
