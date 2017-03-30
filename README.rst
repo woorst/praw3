@@ -1,13 +1,12 @@
-.. _main_page:
-
 PRAW: The Python Reddit API Wrapper
 ===================================
 
-.. begin_description
+|travis-ci| |coveralls| |version|
 
-.. image:: https://travis-ci.org/michael-lazar/praw3.svg?branch=master
+.. |version| image:: http://img.shields.io/version/3.6.1.png?color=green
+.. |travis-ci| image:: https://travis-ci.org/michael-lazar/praw3.svg?branch=master
   :target: https://travis-ci.org/michael-lazar/praw3
-.. image:: https://coveralls.io/repos/github/michael-lazar/praw3/badge.svg?branch=master
+.. |coveralls| image:: https://coveralls.io/repos/github/michael-lazar/praw3/badge.svg?branch=master
   :target: (https://coveralls.io/github/michael-lazar/praw3?branch=master
 
 This repository contains a fork of the `PRAW <https://github.com/praw-dev/praw>`_ library, with intent of continuing support for the (deprecated) version 3 branch. If you are looking for information about the official PRAW library, please visit their `documentation <http://praw.readthedocs.io/en/latest/>`_. This fork was created to support the `RTV <https://github.com/michael-lazar/rtv>`_ reddit command line application. RTV relies heavily on the structure of the legacy PRAW API and would require a major overhaul to support the new version. The maintainer of PRAW has expressed that he does not intend to provide any support for older versions going forward. It is important to note that the Reddit API itself has not released any breaking changes. Both versions of PRAW can interact with the core Reddit functions, although the newer version contains support for some of the more cutting-edge features such as live threads.
@@ -28,12 +27,8 @@ Documentation
 
 For now, the PRAW v3 documentation is still being hosted at http://praw.readthedocs.io/en/v3.6.1/
 
-
-
 License
 -------
 
 All of the code contained here is licensed by
 `the GNU GPLv3 <https://github.com/praw-dev/praw/blob/master/COPYING>`_.
-
-.. end_license
