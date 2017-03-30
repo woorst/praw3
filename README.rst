@@ -1,9 +1,8 @@
 PRAW: The Python Reddit API Wrapper
 ===================================
 
-|travis-ci| |coveralls| |version|
+|travis-ci| |coveralls|
 
-.. |version| image:: http://img.shields.io/version/3.6.1.png?color=green
 .. |travis-ci| image:: https://travis-ci.org/michael-lazar/praw3.svg?branch=master
   :target: https://travis-ci.org/michael-lazar/praw3
 .. |coveralls| image:: https://coveralls.io/repos/github/michael-lazar/praw3/badge.svg?branch=master
