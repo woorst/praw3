@@ -77,6 +77,7 @@ class MockResponse(MagicMock):
         self.is_permanent_redirect = \
             ('location' in self.headers and self.status_code in [301, 308])
         self.ok = 200 <= self.status_code < 300
+        self.is_redirect = real_response.is_redirect
 
     @classmethod
     def in_place(cls, holder, attribute='recorded_response',
