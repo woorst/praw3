@@ -19,8 +19,8 @@ This repository was forked on March 6, 2017 from PRAW v3.6.1. Since then, the fo
 
 - Disabled and removed the ``update_checker`` project dependency
 - Switched from absolute imports to relative imports, in order to make it possible to bundle the *praw/* directory inside of another project
-- Upped the ``requests`` version requirement to v2.4.0 `issue <https://github.com/praw-dev/praw/issues/737>`_
-- Fix for new user profiles ``TypeError: subreddit_name must be a non-empty string`` `issue <https://github.com/michael-lazar/rtv/issues/375>`_
+- Upped the ``requests`` version requirement to v2.4.0 (`link <https://github.com/praw-dev/praw/issues/737>`_)
+- Fix for new user profiles ``TypeError: subreddit_name must be a non-empty string`` (`link <https://github.com/michael-lazar/rtv/issues/375>`_)
 
 
 Documentation
